@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+:root {
+	--color-brand-color: #9333ea;
+	--color-brand-color-light: #a855f7;
+	--color-brand-color-lighter: #c084fc;
+	--color-text-color-primary: #f9fafb;
+	--color-text-color-secondary: #e4e4e7;
+	--color-close-button-color: #a1a1aa;
+	--color-stroke-color: #3f3f46;
+	--color-surface-color: #18181b;
+	--color-background-color: #09090b;
+
+  font-family: Inter;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--color-background-color);
+  color: var(--color-text-color-primary);
+}
+
+#app {
+  height: 100vh;
+  max-width: 88rem;
+  margin: auto;
+  background-color: var(--color-surface-color);
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+}
+
+/* header */
+header {
+  font-size: 2rem;
+  color: var(--color-text-color-secondary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+
+  border-bottom: 1px solid var(--color-stroke-color);
+
+  padding: 2.4rem 3.2rem;
+}
+
+header .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+header .user-info img {
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+header .user-status .status {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+
+  margin-top: 0.4rem;
+}
+
+header .user-status .status::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  background-color: #00b37e;
+  border-radius: 50%;
+}
+
+header .user-status .status {
+  color: #00b37e;
+  font-size: 1.2rem;
+}
+
+/* main */
+main {
+  padding: 1.4rem 3.2rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+
+main .last-seen {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+main .messages {
+  display: grid;
+  gap: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+main .message .body {
+  width: fit-content;
+  margin-top: 1rem;
+  background-color: #633bbc;
+  padding: 1.4rem;
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+}
+
+main .message:not(.you) {
+  width: 60vw;
+}
+
+main .message.you {
+  margin-left: auto;
+}
+
+main .message.you .top {
+  text-align: right;
+}
+
+main .message.you .body {
+  background-color: #07847e;
+  border-radius: 0.8rem 0.8rem 0 0.8rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-color-light);
+  border-radius: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-background-color);
+}
+
+/* footer */
+footer {
+  padding: 2.4rem 3.2rem;
+  border-top: 1px solid var(--color-stroke-color);
+}
+
+footer form {
+  display: flex;
+  align-items: center;
+  background: #282843;
+  border-radius: 99rem;
+  padding: 1.4rem 2.4rem;
+}
+
+footer form:focus-within {
+  outline: 2px solid white;
+}
+
+footer form input {
+  flex: 1;
+  outline: none;
+  color: #e1e1e6;
+}
+
+footer form input::placeholder {
+  color: #e1e1e6;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+footer form button i {
+  color: #e1e1e6;
+  font-size: 2.4rem;
+}
+
+/* @media (min-width: 375px) {
+  header {
+    padding: 2.4rem 2.6rem;
+  }
+
+  main {
+    padding: 2.6rem;
+  }
+
+  footer {
+    padding: 2.6rem;
+  }
+} */
