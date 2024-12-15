@@ -30,7 +30,7 @@ button {
 body {
   font-size: 1.6rem;
 
-  background-color: var(--color-background-color);
+  background-color: #1a1924;
   color: var(--color-text-color-primary);
 }
 
@@ -38,7 +38,6 @@ body {
   height: 100vh;
   max-width: 88rem;
   margin: auto;
-  background-color: var(--color-surface-color);
 
   display: grid;
   grid-template-rows: max-content 1fr max-content;
